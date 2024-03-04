@@ -4,7 +4,10 @@ export class Dealer_Locator {
 
     DealerLocatorBTN() {
         // This is the Find a dealer BTN 
-        cy.get('#delaer').contains("Find a Dealer").should("be.visible").click();
+        cy.get('#delaer')
+        .contains("Find a Dealer")
+        .should("be.visible")
+        .click();
     };
 
     DealerLocatorPageHeader() {
@@ -28,7 +31,9 @@ export class Dealer_Locator {
 
     WhatsAppCTA() {
         // This is the Whatsapp CTA with Phone number copy on the Find a Dealer Page 
-        cy.get('[href="https://wa.me/7984774653"]').click({ force: true });
+        cy.get('[href="https://wa.me/7984774653"]')
+        .click({ force: true });
+       
     };
 
     GetDirectionCTA() {

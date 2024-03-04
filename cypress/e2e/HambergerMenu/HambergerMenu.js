@@ -66,8 +66,62 @@ When("User Clicks on Support CTA", () => {
 });
 
 Then("It is Verified that all the CTA and Hyperlink are clickable on Hamberberger Menu", () => {
-Sp.SupportBanner();
+  Sp.Support_Banner();
 });
+
+
+//Test Case II- Verify that All the Leagel Pages CTA are clickable
+
+Then("User should see the Hamberberger Menu Opened", () => {
+  HM.Copyright_Label();
+});
+
+When("User cliks on CAUTION NOTICE", () => {
+  HM.HambergerMenu();
+  HM.CAUTION_NOTICE_CTA();
+});
+
+Then("User should Navigate to CAUTION NOTICE Page", () => {
+  HM.CAUTION_NOTICE_Header();
+});
+
+When("User clicks on PRIVACY POLICY", () => {
+  HM.HambergerMenu();
+  HM.Privacy_Policy_CTA();
+});
+
+Then("User should Navigate to PRIVACY POLICY Page", () => {
+
+  HM.PRIVACY_POLICY_Header();
+});
+
+When("User clicks on Join Waitlist T&C", () => {
+  HM.HambergerMenu();
+  HM.Join_Waitlist_TandC_CTA();
+});
+
+Then("User should Navigate to TERMS AND CONDITIONS OF JOIN THE WAITLIST Page", () => {
+
+  HM.TERMS_AND_CONDITIONS_OF_JOIN_THE_WAITLIST_Header();
+});
+
+When("User clicks on T & C of Use", () => {
+  HM.HambergerMenu();
+  HM.T_C_of_Use_CTA
+});
+
+Then("User should Navigate to T & C of Use Page", () => {
+  HM.TERMS_AND_CONDITIONS_OF_ONLINE_PRE_BOOKING_Header();
+});
+
+When("User clicks on Pre-Booking T & C", () => {
+  HM.T_C_of_Use_CTA();
+});
+
+Then("User should Navigate to Pre-Booking T & C Page", () => {
+  HM.Pre_Booking_T_C();
+});
+
 
 After(() => {
   // Code to clear data or perform cleanup actions
